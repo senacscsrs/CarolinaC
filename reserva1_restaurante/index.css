@@ -108,7 +108,7 @@ select {
 /* Imagem */
 img {
     display: block;
-    max-width: 50%;
+    max-width: 100%;
     border-radius: 10px;
     margin: 0 auto;
 }

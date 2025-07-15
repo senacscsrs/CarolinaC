@@ -1,0 +1,66 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fontes */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7e6e6;
+    color: #4b2c20;
+    padding-bottom: 40px;
+}
+
+/* Cabeçalho fixo */
+header {
+    background-color: #6b2a27;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo da página de contato */
+.contato {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.contato section {
+    margin-bottom: 30px;
+}
+
+.contato h2 {
+    font-size: 20px;
+    color: #3a1d12;
+    margin-bottom: 10px;
+}
+
+.contato p {
+    font-size: 16px;
+    line-height: 1.5;
+}
