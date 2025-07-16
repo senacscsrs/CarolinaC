@@ -22,6 +22,7 @@ header {
 nav {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -63,4 +64,35 @@ nav button:hover {
 .contato p {
     font-size: 16px;
     line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    .contato {
+        padding: 0 15px;
+        margin: 30px 10px;
+    }
+
+    .contato h2 {
+        font-size: 18px;
+    }
+
+    .contato p {
+        font-size: 14px;
+    }
 }

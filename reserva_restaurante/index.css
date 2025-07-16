@@ -23,6 +23,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav img {
@@ -48,7 +49,7 @@ h1 {
     text-align: center;
     color: #333;
     margin-top: 40px;
-    margin-bottom: 30px; /* Espaço extra */
+    margin-bottom: 30px;
     font-size: 28px;
 }
 
@@ -59,18 +60,29 @@ form {
     margin: 0 auto 40px auto;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
+/* Labels e títulos dos campos */
 form h3 {
     text-align: left;
-    margin: 25px 0 5px 0; /* mais espaço superior */
+    margin: 25px 0 5px 0;
     font-size: 16px;
     color: #555;
 }
 
-/* Linhas (simulando campos) */
+/* Campos de entrada */
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Linhas separadoras */
 hr {
     border: none;
     border-bottom: 1.5px solid #aaa;
@@ -111,4 +123,51 @@ img {
     max-width: 100%;
     border-radius: 10px;
     margin: 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 4px 0;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    form {
+        padding: 20px;
+        margin: 0 15px 40px 15px;
+    }
+
+    form h3 {
+        font-size: 15px;
+    }
+
+    select {
+        font-size: 15px;
+    }
+
+    input {
+        font-size: 15px;
+    }
+
+    .confirmar-btn {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+
+    img {
+        margin-top: 20px;
+    }
 }

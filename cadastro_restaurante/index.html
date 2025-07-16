@@ -1,25 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Cadastro</title>
 </head>
 <body>
-    <form>
-        <h1>Cadastre-se</h1>
-        <h3>Nome completo</h3>
-        <hr>
-        <h3>Email</h3>
-        <hr>
-        <h3>Número</h3>
-        <hr>
-        <h3>CPF</h3>
-        <hr>
-        <h3>Senha</h3>
-        <hr>
-        <img src="logo.jpeg">
-    </form>
+  <form id="cadastro-form">
+    <h1>Cadastre-se</h1>
+
+    <h3>Nome completo</h3>
+    <input type="text" name="nome" placeholder="Digite seu nome" required />
+    <hr />
+
+    <h3>Email</h3>
+    <input type="email" name="email" placeholder="Digite seu email" required />
+    <hr />
+
+    <h3>Número</h3>
+    <input type="tel" name="numero" placeholder="(00) 00000-0000" required />
+    <hr />
+
+    <h3>CPF</h3>
+    <input type="text" name="cpf" placeholder="Somente números" pattern="\d{11}" required />
+    <hr />
+
+    <h3>Senha</h3>
+    <input type="password" name="senha" placeholder="Crie uma senha" required />
+    <hr />
+
+    <button class="confirmar-btn" type="submit">Confirmar</button>
+
+    <img src="logo.jpeg" alt="Logo do restaurante">
+  </form>
+
+  <script>
+    const form = document.getElementById("cadastro-form");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // impede o envio padrão
+
+      if (form.checkValidity()) {
+        // se o formulário for válido
+        window.location.href = "../paginainicial_restaurante"; // redireciona
+      } else {
+        form.reportValidity(); // exibe mensagens de erro
+      }
+    });
+  </script>
 </body>
 </html>

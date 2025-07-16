@@ -23,6 +23,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav img {
@@ -80,9 +81,47 @@ p {
     color: #333;
 }
 
-/* Preços (opcional - pode adicionar span com classe no HTML para formatar) */
+/* Preços */
 .preco {
     float: right;
     font-weight: bold;
     color: #7b2d26;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    div {
+        padding: 20px 15px;
+        margin: 15px 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .preco {
+        float: none;
+        display: block;
+        margin-top: 5px;
+        font-size: 15px;
+    }
 }

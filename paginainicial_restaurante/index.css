@@ -20,6 +20,7 @@ header {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
 }
@@ -55,7 +56,7 @@ main img {
 main h1 {
     text-align: center;
     margin: 30px 20px 20px 20px;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     color: #3a1d12;
 }
@@ -71,4 +72,28 @@ main h1 {
     font-size: 16px;
     line-height: 1.6;
     text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    main h1 {
+        font-size: 20px;
+        margin: 20px 10px;
+    }
+
+    .sobre {
+        padding: 20px 15px;
+        font-size: 15px;
+        margin: 20px 15px 40px 15px;
+    }
 }

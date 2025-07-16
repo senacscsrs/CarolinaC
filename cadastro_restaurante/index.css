@@ -11,6 +11,7 @@ body {
     background-color: #6b2a27;
     color: #333;
     padding: 20px;
+    line-height: 1.6;
 }
 
 /* Cabeçalho de navegação */
@@ -21,12 +22,15 @@ header {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 nav img {
     height: 40px;
+    max-width: 100%;
 }
 
 nav button {
@@ -35,26 +39,30 @@ nav button {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     transition: 0.3s;
+    padding: 8px;
 }
 
-nav button:hover {
+nav button:hover,
+nav button:focus {
     text-decoration: underline;
+    outline: 2px solid #fff; /* Acessibilidade para teclado */
+    outline-offset: 2px;
 }
 
 /* Título principal */
 h1 {
     text-align: center;
-    color: #333;
-    margin-top: 40px;
-    margin-bottom: 30px; /* Espaço extra */
-    font-size: 28px;
+    color: #6b2a27;
+    margin: 40px 0 30px 0;
+    font-size: 2rem;
 }
 
 /* Formulário */
 form {
     background-color: #f2f2f2;
+    width: 100%;
     max-width: 500px;
     margin: 0 auto 40px auto;
     padding: 30px;
@@ -65,8 +73,8 @@ form {
 
 form h3 {
     text-align: left;
-    margin: 25px 0 5px 0; /* mais espaço superior */
-    font-size: 16px;
+    margin: 25px 0 5px 0;
+    font-size: 1rem;
     color: #555;
 }
 
@@ -81,7 +89,7 @@ hr {
 select {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -94,21 +102,56 @@ select {
     color: white;
     border: none;
     padding: 12px 20px;
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-bottom: 25px;
 }
 
-.confirmar-btn:hover {
+.confirmar-btn:hover,
+.confirmar-btn:focus {
     background-color: #5e1f1a;
+    outline: 2px solid white; /* acessibilidade */
+    outline-offset: 2px;
 }
 
 /* Imagem */
 img {
     display: block;
-    max-width: 50%;
+    max-width: 100%;
     border-radius: 10px;
     margin: 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    nav button {
+        font-size: 0.9rem;
+    }
+}
+    input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
