@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Kanban Simples</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Quadro Kanban Simples</h1>
+
+  <div class="add-tarefa">
+    <input type="text" id="novaTarefa" placeholder="Digite uma tarefa...">
+    <button onclick="adicionarTarefa()">Adicionar</button>
+  </div>
+
+  <div class="kanban">
+    <div class="coluna" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+      <h2>A Fazer</h2>
+    </div>
+    <div class="coluna" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+      <h2>Em Progresso</h2>
+    </div>
+    <div class="coluna" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+      <h2>Concluído</h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
